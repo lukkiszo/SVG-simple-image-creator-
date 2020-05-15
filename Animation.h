@@ -94,7 +94,7 @@ class Animation
         //wektor.push_back(klatka4);
         //wektor.push_back(klatka5);
         //wektor.push_back(klatka6);
-        
+
         slonce.makeSun(rysunek);
         talerz.makePlate(rysunek);
         make(klatka1, klatka2, klatka3, klatka4, klatka5, klatka6, rysunek, slonce, talerz);

@@ -35,5 +35,6 @@ int main()
 /* TO DO LIST
  * 1. wprowadzic wektory
  * 2. wprowadzic obsluge wyjatkow
+ * 3. polaczenie klatek w jedna animacje
  *
 */
