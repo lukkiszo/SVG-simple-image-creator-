@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/podzielone.dir/1.cpp.o"
   "CMakeFiles/podzielone.dir/main.cpp.o"
   "podzielone"
   "podzielone.pdb"

@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/szopka/Pulpit/proe/projekt1/podzielone/1.cpp" "/home/szopka/Pulpit/proe/projekt1/podzielone/cmake-build-debug/CMakeFiles/podzielone.dir/1.cpp.o"
   "/home/szopka/Pulpit/proe/projekt1/podzielone/main.cpp" "/home/szopka/Pulpit/proe/projekt1/podzielone/cmake-build-debug/CMakeFiles/podzielone.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

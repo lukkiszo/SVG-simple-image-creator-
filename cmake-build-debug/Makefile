@@ -123,33 +123,6 @@ podzielone/fast:
 	$(MAKE) -f CMakeFiles/podzielone.dir/build.make CMakeFiles/podzielone.dir/build
 .PHONY : podzielone/fast
 
-1.o: 1.cpp.o
-
-.PHONY : 1.o
-
-# target to build an object file
-1.cpp.o:
-	$(MAKE) -f CMakeFiles/podzielone.dir/build.make CMakeFiles/podzielone.dir/1.cpp.o
-.PHONY : 1.cpp.o
-
-1.i: 1.cpp.i
-
-.PHONY : 1.i
-
-# target to preprocess a source file
-1.cpp.i:
-	$(MAKE) -f CMakeFiles/podzielone.dir/build.make CMakeFiles/podzielone.dir/1.cpp.i
-.PHONY : 1.cpp.i
-
-1.s: 1.cpp.s
-
-.PHONY : 1.s
-
-# target to generate assembly for a file
-1.cpp.s:
-	$(MAKE) -f CMakeFiles/podzielone.dir/build.make CMakeFiles/podzielone.dir/1.cpp.s
-.PHONY : 1.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -186,9 +159,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... podzielone"
-	@echo "... 1.o"
-	@echo "... 1.i"
-	@echo "... 1.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

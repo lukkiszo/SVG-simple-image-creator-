@@ -86,21 +86,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/szopka/Pulpit/proe/projekt1/podzielone/1.cpp">
-			<Option target="podzielone"/>
-		</Unit>
-		<Unit filename="/home/szopka/Pulpit/proe/projekt1/podzielone/Animation.h">
-			<Option target="podzielone"/>
-		</Unit>
-		<Unit filename="/home/szopka/Pulpit/proe/projekt1/podzielone/Picture.h">
-			<Option target="podzielone"/>
-		</Unit>
-		<Unit filename="/home/szopka/Pulpit/proe/projekt1/podzielone/Plate.h">
-			<Option target="podzielone"/>
-		</Unit>
-		<Unit filename="/home/szopka/Pulpit/proe/projekt1/podzielone/Sun.h">
-			<Option target="podzielone"/>
-		</Unit>
 		<Unit filename="/home/szopka/Pulpit/proe/projekt1/podzielone/main.cpp">
 			<Option target="podzielone"/>
 		</Unit>

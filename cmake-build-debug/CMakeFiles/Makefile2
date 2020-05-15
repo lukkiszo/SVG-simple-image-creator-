@@ -74,12 +74,12 @@ clean: CMakeFiles/podzielone.dir/clean
 CMakeFiles/podzielone.dir/all:
 	$(MAKE) -f CMakeFiles/podzielone.dir/build.make CMakeFiles/podzielone.dir/depend
 	$(MAKE) -f CMakeFiles/podzielone.dir/build.make CMakeFiles/podzielone.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/szopka/Pulpit/proe/projekt1/podzielone/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target podzielone"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/szopka/Pulpit/proe/projekt1/podzielone/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target podzielone"
 .PHONY : CMakeFiles/podzielone.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/podzielone.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/szopka/Pulpit/proe/projekt1/podzielone/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/szopka/Pulpit/proe/projekt1/podzielone/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/podzielone.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/szopka/Pulpit/proe/projekt1/podzielone/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/podzielone.dir/rule

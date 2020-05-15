@@ -31,3 +31,9 @@ int main()
     Animation animacja;
     animacja.doAll();   
 }
+
+/* TO DO LIST
+ * 1. wprowadzic wektory
+ * 2. wprowadzic obsluge wyjatkow
+ *
+*/

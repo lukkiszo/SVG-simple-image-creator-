@@ -107,7 +107,7 @@ class Plate: public Picture
 
     virtual void draw(std::ostream& obraz)
     {
-        unsigned int tmp = stan - 1;
+        unsigned int tmp = getStan() - 1;
         double kat = 0;
 
         if((nachylenie - (tmp * ((double)zmiana / 15) * nachylenie)) > 0) kat = -(nachylenie - (tmp * ((double)zmiana / 15) * nachylenie));
@@ -117,7 +117,7 @@ class Plate: public Picture
         obraz << "<ellipse transform=\"rotate(" << kat << " " << wspxt << "," << getSzer() - wspyt << ")\" ";
         obraz << "cx=\"" << wspxt + tmp * getSzer() / 6 << "\" cy=\"" << getWysok() - wspyt << "\" rx=\"" << szerokosc << "\" ry=\"" << wysokosc << "\" style=\"fill:brown\" />" << std::endl;
 
-        stan += 1;
+        zmienStan();
     }
 
     static Plate makePlate(Picture& rys)

@@ -41,11 +41,14 @@ class Picture
     private:
     unsigned int szerokosc;
     unsigned int wysokosc;
+    unsigned int stan;
 
     public:
-    unsigned int stan;
+    int getStan() const {return stan;}
     int getSzer() const {return szerokosc;}
     int getWysok() const {return wysokosc;}
+
+    void zmienStan(){stan += 1;}
 
     virtual void draw(std::ofstream& klatka){}
 
