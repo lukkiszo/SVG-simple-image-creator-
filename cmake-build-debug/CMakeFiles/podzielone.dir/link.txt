@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/podzielone.dir/1.cpp.o CMakeFiles/podzielone.dir/main.cpp.o  -o podzielone 

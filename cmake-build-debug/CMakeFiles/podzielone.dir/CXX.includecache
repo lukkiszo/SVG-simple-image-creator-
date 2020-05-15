@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/szopka/Pulpit/proe/projekt1/podzielone/Animation.h
+Picture.h
+/home/szopka/Pulpit/proe/projekt1/podzielone/Picture.h
+Plate.h
+/home/szopka/Pulpit/proe/projekt1/podzielone/Plate.h
+Sun.h
+/home/szopka/Pulpit/proe/projekt1/podzielone/Sun.h
+
+/home/szopka/Pulpit/proe/projekt1/podzielone/Picture.h
+iostream
+-
+fstream
+-
+
+/home/szopka/Pulpit/proe/projekt1/podzielone/Plate.h
+Picture.h
+/home/szopka/Pulpit/proe/projekt1/podzielone/Picture.h
+
+/home/szopka/Pulpit/proe/projekt1/podzielone/Sun.h
+Picture.h
+/home/szopka/Pulpit/proe/projekt1/podzielone/Picture.h
+
+/home/szopka/Pulpit/proe/projekt1/podzielone/main.cpp
+iostream
+-
+fstream
+-
+cmath
+-
+Sun.h
+/home/szopka/Pulpit/proe/projekt1/podzielone/Sun.h
+Plate.h
+/home/szopka/Pulpit/proe/projekt1/podzielone/Plate.h
+Picture.h
+/home/szopka/Pulpit/proe/projekt1/podzielone/Picture.h
+Animation.h
+/home/szopka/Pulpit/proe/projekt1/podzielone/Animation.h
+
