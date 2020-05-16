@@ -20,7 +20,6 @@ Main zawiaduje potencjalnymi danymi wejsciowymi i przebiegiem generacji obrazow.
 #include <iostream>
 #include <fstream>
 #include <cmath>
-#include <vector>
 #include "Sun.h"
 #include "Plate.h"
 #include "Picture.h"
