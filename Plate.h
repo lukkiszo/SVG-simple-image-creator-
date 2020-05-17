@@ -1,3 +1,10 @@
+//
+// Created by szopka on 2020-05-16.
+//
+
+#ifndef UNTITLED_PLATE_H
+#define UNTITLED_PLATE_H
+
 #ifndef Plate_h
 #define Plate_h
 #include "Picture.h"
@@ -7,9 +14,9 @@ int getPlateRadiusX(Picture& rys)
     int a;
     std::cout << "Podaj wybrana dlugosc talerza: ";
     std::cin >> a;
-    while(a<0 || (a>rys.getSzer() && a>rys.getWysok()))
+    while (a < 0 || (a > rys.getSzer() && a > rys.getWysok()))
     {
-        std::cout << "Podaj liczbe z zakresu 0 a " << ((rys.getWysok()<rys.getSzer())?rys.getWysok():rys.getSzer()) << std::endl;
+        std::cout << "Podaj liczbe z zakresu 0 a " << ((rys.getWysok() < rys.getSzer()) ? rys.getWysok() : rys.getSzer()) << std::endl;
         std::cin >> a;
     }
     std::cout << "\n";
@@ -21,9 +28,9 @@ int getPlateRadiusY(Picture& rys)
     int a;
     std::cout << "Podaj wybrana grubosc talerza: ";
     std::cin >> a;
-    while(a<0 || (a>rys.getSzer() && a>rys.getWysok()))
+    while (a < 0 || (a > rys.getSzer() && a > rys.getWysok()))
     {
-        std::cout << "Podaj liczbe z zakresu 0 a " << ((rys.getWysok()<rys.getSzer())?rys.getWysok():rys.getSzer()) << std::endl;
+        std::cout << "Podaj liczbe z zakresu 0 a " << ((rys.getWysok() < rys.getSzer()) ? rys.getWysok() : rys.getSzer()) << std::endl;
         std::cin >> a;
     }
     std::cout << "\n";
@@ -35,7 +42,7 @@ int getPlateStartHeight(Picture& rys)
     int a;
     std::cout << "Podaj wybrana wysokosc talerza wzgledem ziemi: ";
     std::cin >> a;
-    while(a<0 || a>rys.getWysok())
+    while (a<0 || a>rys.getWysok())
     {
         std::cout << "Podaj liczbe z zakresu 0 a " << rys.getWysok() << std::endl;
         std::cin >> a;
@@ -58,7 +65,7 @@ int getRotationChange()
     int odpowiedz;
     std::cout << "Podaj w skali 1-5 jak szybko ma sie zmieniac nachylenie talerza: ";
     std::cin >> odpowiedz;
-    while(odpowiedz < 1 || odpowiedz > 5)
+    while (odpowiedz < 1 || odpowiedz > 5)
     {
         std::cout << "Mozesz tylko podac liczby od 1 do 5. Twoja odpowiedz: ";
         std::cin >> odpowiedz;
@@ -67,9 +74,9 @@ int getRotationChange()
     return odpowiedz;
 }
 
-class Plate: public Picture
+class Plate : public Picture
 {
-    private:
+private:
     unsigned int szerokosc; // rx
     unsigned int wysokosc; // ry
     unsigned int wspxt;  // cx
@@ -77,13 +84,13 @@ class Plate: public Picture
     double nachylenie;
     unsigned int zmiana;
 
-    public:
+public:
     Plate()
-    { 
+    {
         szerokosc = 95;
         wysokosc = 20;
         wspxt = 100;
-        wspyt = getWysok()/2;
+        wspyt = getWysok() / 2;
         nachylenie = 20;
         zmiana = 5;
     }
@@ -98,21 +105,21 @@ class Plate: public Picture
         zmiana = zmi;
     }
 
-    int getRX() const {return szerokosc;}
-    int getRY() const {return wysokosc;}
-    int getCX() const {return wspxt;}
-    int getCY() const {return wspyt;}
-    int getRot() const {return nachylenie;}
-    int getCng() const {return zmiana;}
+    int getRX() { return szerokosc; }
+    int getRY() { return wysokosc; }
+    int getCX() { return wspxt; }
+    int getCY() { return wspyt; }
+    int getRot() { return nachylenie; }
+    int getCng() { return zmiana; }
 
     virtual void draw(std::ostream& obraz)
     {
         unsigned int tmp = getStan() - 1;
         double kat = 0;
 
-        if((nachylenie - (tmp * ((double)zmiana / 15) * nachylenie)) > 0) kat = -(nachylenie - (tmp * ((double)zmiana / 15) * nachylenie));
+        if ((nachylenie - (tmp * ((double)zmiana / 15) * nachylenie)) > 0) kat = -(nachylenie - (tmp * ((double)zmiana / 15) * nachylenie));
         else kat = fabs(nachylenie - (tmp * ((double)zmiana / 15) * nachylenie));
-            
+
         obraz << "<title>Talerz</title>" << std::endl;
         obraz << "<ellipse transform=\"rotate(" << kat << " " << wspxt << "," << getSzer() - wspyt << ")\" ";
         obraz << "cx=\"" << wspxt + tmp * getSzer() / 6 << "\" cy=\"" << getWysok() - wspyt << "\" rx=\"" << szerokosc << "\" ry=\"" << wysokosc << "\" style=\"fill:brown\" />" << std::endl;
@@ -120,24 +127,29 @@ class Plate: public Picture
         zmienStan();
     }
 
-    static Plate makePlate(Picture& rys)
+    void makePlate(Picture& rys)
     {
         Plate temp;
         int odpowiedz;
         std::cout << "\nWARTOSCI DOMYSLNE TALERZA:" << std::endl;
         std::cout << "wysokosc: " << temp.getCY() << ", szerokosc: " << temp.getCX() << ", grubosc: " << temp.getRY() << ", dlugosc: " << temp.getRX() << std::endl;
-        std::cout << "nachylenie: " << temp.getRot() << ", zmiana nachylenia (skala od 1 do 5): " << temp.getCng() << std::endl; 
+        std::cout << "nachylenie: " << temp.getRot() << ", zmiana nachylenia (skala od 1 do 5): " << temp.getCng() << std::endl;
         std::cout << "\nWpisz 1 aby podac cechy talerza lub wpisz 0 aby ustawic wartosci domyslne" << std::endl;
         std::cin >> odpowiedz;
-        if(odpowiedz != 0)
+        if (odpowiedz != 0)
         {
-            Plate temp(getPlateRadiusX(rys), getPlateRadiusY(rys), 100 , getPlateStartHeight(rys), getPlateRotation(), getRotationChange());
-            return temp;
-        } 
-        else return temp;
+            szerokosc = getPlateRadiusX(rys);
+            wysokosc = getPlateRadiusY(rys);
+            wspxt = 100;
+            wspyt = getPlateStartHeight(rys);
+            nachylenie = getPlateRotation();
+            zmiana = getRotationChange();
+        }
     }
 
     ~Plate() = default;
 };
 
 #endif
+
+#endif //UNTITLED_PLATE_H
