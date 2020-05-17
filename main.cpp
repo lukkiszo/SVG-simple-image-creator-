@@ -18,23 +18,22 @@ Main zawiaduje potencjalnymi danymi wejsciowymi i przebiegiem generacji obrazow.
 */
 
 #include <iostream>
-#include <fstream>
-#include <cmath>
 #include "Sun.h"
 #include "Plate.h"
-#include "Picture.h"
 #include "Animation.h"
 
 
 int main()
-{ 
+{
     Animation animacja;
-    animacja.doAll();   
+    animacja.doAll();
 }
 
 /* TO DO LIST
+    dzialallalalala
  * 1. wprowadzic wektory
  * 2. wprowadzic obsluge wyjatkow
  * 3. polaczenie klatek w jedna animacje
+ * 4.
  *
 */
