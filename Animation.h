@@ -1,3 +1,10 @@
+//
+// Created by szopka on 2020-05-16.
+//
+
+#ifndef UNTITLED_ANIMATION_H
+#define UNTITLED_ANIMATION_H
+
 #ifndef Animation_h
 #define Animation_h
 #include "Picture.h"
@@ -7,13 +14,8 @@
 
 class Animation
 {
-    public:
+public:
     Animation() = default;
-
-    Picture rysunek;
-    Sun slonce;
-    Plate talerz;
-
 
     virtual void draw(std::ofstream& klatka, Picture& rysunek, Sun& slonce, Plate& talerz)
     {
@@ -24,26 +26,30 @@ class Animation
         klatka.close();
     }
 
-    void make(std::vector<std::ofstream*>& wek,  Picture& rysunek, Sun& slonce, Plate& talerz)
-    {   
-        for(size_t i=0; i<6; i++)
+    void make(std::vector<std::ofstream*>& wek, Picture& rysunek, Sun& slonce, Plate& talerz)
+    {
+        for (size_t i = 0; i < 6; i++)
         {
             draw(*wek[i], rysunek, slonce, talerz);
-        }        
+        }
     }
 
     void doAll()
     {
+        Picture rysunek;
+        Sun slonce;
+        Plate talerz;
+
         std::vector <std::ofstream*> wektor;
 
         rysunek.resolutionChoice();
 
-        std::ofstream klatka1 ("klatka1.svg");
-        std::ofstream klatka2 ("klatka2.svg");
-        std::ofstream klatka3 ("klatka3.svg");
-        std::ofstream klatka4 ("klatka4.svg");
-        std::ofstream klatka5 ("klatka5.svg");
-        std::ofstream klatka6 ("klatka6.svg");
+        std::ofstream klatka1("klatka1.svg");
+        std::ofstream klatka2("klatka2.svg");
+        std::ofstream klatka3("klatka3.svg");
+        std::ofstream klatka4("klatka4.svg");
+        std::ofstream klatka5("klatka5.svg");
+        std::ofstream klatka6("klatka6.svg");
 
         wektor.reserve(6);
         wektor.push_back(&klatka1);
@@ -55,6 +61,7 @@ class Animation
 
         slonce.makeSun(rysunek);
         talerz.makePlate(rysunek);
+
         make(wektor, rysunek, slonce, talerz);
 
         wektor.clear();
@@ -65,3 +72,5 @@ class Animation
 };
 
 #endif
+
+#endif //UNTITLED_ANIMATION_H
